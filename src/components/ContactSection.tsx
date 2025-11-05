@@ -96,9 +96,9 @@ const ContactSection: React.FC = () => {
                     right: 0,
                     bottom: 0,
                     background: `
-                        radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                       // radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
                         // radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 50% 50%, rgba(76, 175, 80, 0.05) 0%, transparent 70%)
+                       // radial-gradient(circle at 50% 50%, rgba(76, 175, 80, 0.05) 0%, transparent 70%)
                     `,
                 }}
             />
@@ -115,7 +115,7 @@ const ContactSection: React.FC = () => {
                         <Typography
                             variant="h2"
                             sx={{
-                                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                                background: 'white',
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -152,8 +152,7 @@ const ContactSection: React.FC = () => {
                         >
                             <Card
                                 sx={{
-                                    background: 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
                                     borderRadius: 4,
                                     overflow: 'hidden',
                                 }}
@@ -254,26 +253,29 @@ const ContactSection: React.FC = () => {
                                             </Grid>
                                             <Grid item xs={12}>
                                                 <Button
-                                                    type="submit"
                                                     variant="contained"
-                                                    size="large"
-                                                    startIcon={<Send />}
+                                                    type="submit"
                                                     sx={{
-                                                        background: 'linear-gradient(135deg, #00D4FF 0%, #0099CC 100%)',
-                                                        px: 6,
-                                                        py: 2,
-                                                        fontSize: '1.1rem',
-                                                        fontWeight: 600,
+                                                        background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
+                                                        border: '2px solid transparent',
                                                         borderRadius: 3,
+                                                        color:"#FFFFFF",
+                                                        px: 3,
+                                                        py: 1,
+                                                        fontWeight: 600,
+                                                        textTransform: 'none',
+                                                        transition: 'all 0.4s ease',
                                                         '&:hover': {
-                                                            background: 'linear-gradient(135deg, #4DD4FF 0%, #00D4FF 100%)',
-                                                            transform: 'translateY(-3px)',
-                                                            boxShadow: '0 12px 30px rgba(0, 212, 255, 0.4)',
+                                                            background: 'linear-gradient(black, black) padding-box, linear-gradient(137deg, rgba(251, 0, 255, 1) 19%, rgba(0, 51, 255, 1) 65%) border-box',
+                                                            transform: 'translateY(-2px)',
+                                                            boxShadow: '0 0 12px rgba(0, 51, 255, 0.4)',
                                                         },
                                                     }}
+
                                                 >
                                                     Send Message
                                                 </Button>
+
                                             </Grid>
                                         </Grid>
                                     </Box>
@@ -309,7 +311,7 @@ const ContactSection: React.FC = () => {
                                                 mb: 3,
                                                 p: 2,
                                                 borderRadius: 2,
-                                                background: 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)',
+                                                background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
                                                 border: '1px solid rgba(255, 255, 255, 0.1)',
                                                 '&:hover': {
                                                     border: `1px solid ${info.color}40`,
@@ -356,8 +358,7 @@ const ContactSection: React.FC = () => {
                                             label={service}
                                             size="small"
                                             sx={{
-                                                background: 'linear-gradient(135deg, #00D4FF20, #00D4FF10)',
-                                                border: '1px solid #00D4FF40',
+                                                background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
                                                 color: '#00D4FF',
                                                 fontWeight: 500,
                                                 '&:hover': {
@@ -369,7 +370,7 @@ const ContactSection: React.FC = () => {
                                 </Box>
                             </Box>
 
-                            <Box sx={{ mt: 4, p: 3, background: 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)', borderRadius: 3, border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                            <Box sx={{ mt: 4, p: 3, background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box', borderRadius: 3, border: '1px solid rgba(255, 255, 255, 0.1)' }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                                     <CheckCircle sx={{ color: '#4CAF50', mr: 1 }} />
                                     <Typography variant="body2" sx={{ fontWeight: 600 }}>

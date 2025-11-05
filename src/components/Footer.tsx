@@ -89,29 +89,28 @@ const Footer: React.FC = () => {
                             <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                                 <Box
                                     sx={{
-                                        width: 50,
-                                        height: 50,
+                                        width: 40,
+                                        height: 40,
                                         borderRadius: 2,
-                                        background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         mr: 2,
                                     }}
                                 >
-                                    <Code sx={{ color: 'white', fontSize: 28 }} />
+                                    <img style={{width: "40px", height: "40px"}} src="logo.png"/>
                                 </Box>
                                 <Typography
                                     variant="h5"
                                     sx={{
                                         fontWeight: 700,
-                                        background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                                        background: 'rgb(0, 212, 255)',
                                         backgroundClip: 'text',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
                                     }}
                                 >
-                                    Kyntri
+                                    KYNTRI
                                 </Typography>
                             </Box>
                             <Typography
@@ -222,7 +221,7 @@ const Footer: React.FC = () => {
                                                     width: 30,
                                                     height: 30,
                                                     borderRadius: 1,
-                                                    background: 'linear-gradient(135deg, #00D4FF, #FF6B6B)',
+                                                    background: 'linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%)',
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',
@@ -273,7 +272,7 @@ const Footer: React.FC = () => {
                                                     width: 30,
                                                     height: 30,
                                                     borderRadius: 1,
-                                                    background: 'linear-gradient(135deg, #00D4FF, #FF6B6B)',
+                                                    background: 'linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%)',
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',

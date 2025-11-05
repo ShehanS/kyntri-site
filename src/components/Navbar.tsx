@@ -15,7 +15,6 @@ import {
 } from '@mui/material';
 import {motion} from 'framer-motion';
 import {AutoAwesome, Close as CloseIcon, Code, ContactMail, Menu as MenuIcon, Psychology} from '@mui/icons-material';
-
 const Navbar: React.FC = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -102,13 +101,14 @@ const Navbar: React.FC = () => {
                     transition: 'all 0.3s ease',
                 }}
             >
-                <Toolbar sx={{py: 1}}>
+                <Toolbar sx={{py: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                    {/* Left - Logo and Name */}
                     <motion.div
                         initial={{opacity: 0, x: -20}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 0.6}}
                     >
-                        <Box sx={{display: 'flex', alignItems: 'center', flexGrow: 1}}>
+                        <Box sx={{display: 'flex', alignItems: 'center'}}>
                             <Box
                                 sx={{
                                     width: 40,
@@ -123,22 +123,22 @@ const Navbar: React.FC = () => {
                                 <img style={{width: "40px", height: "40px"}} src="logo.png"/>
                             </Box>
                             <Typography
-                                variant="h6"
+                                variant="h5"
                                 sx={{
                                     fontWeight: 700,
-                                    background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                                    background: 'rgb(0, 212, 255)',
                                     backgroundClip: 'text',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
                                 }}
                             >
-                                Kyntri
+                                KYNTRI
                             </Typography>
                         </Box>
                     </motion.div>
 
-                    {/* Desktop Navigation */}
-                    <Box sx={{display: {xs: 'none', md: 'flex'}, alignItems: 'center', gap: 1}}>
+                    {/* Center - Desktop Navigation */}
+                    <Box sx={{display: {xs: 'none', md: 'flex'}, alignItems: 'center', gap: 1, position: 'absolute', left: '50%', transform: 'translateX(-50%)'}}>
                         {navItems.map((item, index) => (
                             <motion.div
                                 key={item.name}
@@ -167,31 +167,38 @@ const Navbar: React.FC = () => {
                                 </Button>
                             </motion.div>
                         ))}
+                    </Box>
+
+                    {/* Right - Get Started Button */}
+                    <Box sx={{display: {xs: 'none', md: 'block'}}}>
                         <motion.div
                             initial={{opacity: 0, scale: 0.8}}
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.6, delay: 0.4}}
                         >
-                            <Button
-                                variant="contained"
-                                onClick={() => scrollToSection('#contact')}
-                                sx={{
-                                    background: 'linear-gradient(135deg, #00D4FF 0%, #0099CC 100%)',
-                                    ml: 2,
-                                    px: 3,
-                                    py: 1,
-                                    borderRadius: 3,
-                                    fontWeight: 600,
-                                    textTransform: 'none',
-                                    '&:hover': {
-                                        background: 'linear-gradient(135deg, #4DD4FF 0%, #00D4FF 100%)',
-                                        transform: 'translateY(-2px)',
-                                        boxShadow: '0 8px 20px rgba(0, 212, 255, 0.3)',
-                                    },
-                                }}
-                            >
-                                Get Started
-                            </Button>
+                            {/*<Button*/}
+                            {/*    variant="contained"*/}
+                            {/*    onClick={() => scrollToSection('#contact')}*/}
+                            {/*    sx={{*/}
+                            {/*        background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',*/}
+                            {/*        border: '2px solid transparent',*/}
+                            {/*        borderRadius: 3,*/}
+                            {/*        color:"#FFFFFF",*/}
+                            {/*        px: 3,*/}
+                            {/*        py: 1,*/}
+                            {/*        fontWeight: 600,*/}
+                            {/*        textTransform: 'none',*/}
+                            {/*        transition: 'all 0.4s ease',*/}
+                            {/*        '&:hover': {*/}
+                            {/*            background: 'linear-gradient(black, black) padding-box, linear-gradient(137deg, rgba(251, 0, 255, 1) 19%, rgba(0, 51, 255, 1) 65%) border-box',*/}
+                            {/*            transform: 'translateY(-2px)',*/}
+                            {/*            boxShadow: '0 0 12px rgba(0, 51, 255, 0.4)',*/}
+                            {/*        },*/}
+                            {/*    }}*/}
+
+                            {/*>*/}
+                            {/*    Get Started*/}
+                            {/*</Button>*/}
                         </motion.div>
                     </Box>
 

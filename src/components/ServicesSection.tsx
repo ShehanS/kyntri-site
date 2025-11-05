@@ -85,15 +85,6 @@ const services = [
         gradient: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
     },
     {
-        icon: <Security sx={{ fontSize: 40 }} />,
-        title: 'Cybersecurity',
-        description:
-            'Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.',
-        features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Risk Assessment'],
-        color: '#F44336',
-        gradient: 'linear-gradient(135deg, #F44336 0%, #D32F2F 100%)',
-    },
-    {
         icon: <Engineering sx={{ fontSize: 40 }} />,
         title: 'IoT Solutions',
         description:
@@ -101,15 +92,6 @@ const services = [
         features: ['Device Management', 'Real-time Monitoring', 'Data Collection', 'Smart Sensors'],
         color: '#00BCD4',
         gradient: 'linear-gradient(135deg, #00BCD4 0%, #0097A7 100%)',
-    },
-    {
-        icon: <SmartToy sx={{ fontSize: 40 }} />,
-        title: 'Blockchain',
-        description:
-            'Secure, decentralized solutions using blockchain technology for transparency, trust, and immutability.',
-        features: ['Smart Contracts', 'DeFi', 'NFTs', 'Cryptocurrency'],
-        color: '#8BC34A',
-        gradient: 'linear-gradient(135deg, #8BC34A 0%, #689F38 100%)',
     },
     {
         icon: <Speed sx={{ fontSize: 40 }} />,
@@ -151,10 +133,6 @@ const ServicesSection: React.FC = () => {
                         align="center"
                         gutterBottom
                         sx={{
-                            background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
-                            backgroundClip: 'text',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
                             fontWeight: 700,
                             mb: 2,
                         }}
@@ -200,21 +178,21 @@ const ServicesSection: React.FC = () => {
                                 sx={{
                                     width: isMobile ? '100%' : 320,
                                     height: 400,
-                                    background: 'linear-gradient(145deg, #1A1A1A 0%, #2A2A2A 100%)',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    background: 'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
+                                    border: '2px solid rgba(255, 255, 255, 0.1)',
                                     borderRadius: 3,
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'space-between',
-                                    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-                                    '&:hover': {
-                                        boxShadow: `0 8px 24px ${service.color}30`,
-                                        border: `1px solid ${service.color}50`,
-                                        transform: 'translateY(-8px)',
-                                    },
+                                    // boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                                    // '&:hover': {
+                                    //     boxShadow: `0 8px 24px ${service.color}30`,
+                                    //     border: `1px solid ${service.color}50`,
+                                    //     transform: 'translateY(-8px)',
+                                    // },
                                 }}
                             >
-                                <Box sx={{ height: 4, background: service.gradient }} />
+                                {/*<Box sx={{ height: 4, background: service.gradient }} />*/}
                                 <CardContent sx={{ p: 3 }}>
                                     <Box
                                         sx={{
@@ -238,19 +216,19 @@ const ServicesSection: React.FC = () => {
                                         >
                                             {service.icon}
                                         </Box>
-                                        <Typography variant="h5" sx={{ fontWeight: 600, color: service.color }}>
+                                        <Typography variant="h5" sx={{ fontWeight: 600, color: "#FFFFFF" }}>
                                             {service.title}
                                         </Typography>
                                     </Box>
 
-                                    <Typography color="text.secondary" sx={{ mb: 2, lineHeight: 1.5, fontSize: '0.9rem' }}>
+                                    <Typography color="#FFFFFF" sx={{ mb: 2, lineHeight: 1.5, fontSize: '0.9rem' }}>
                                         {service.description}
                                     </Typography>
 
                                     <Box sx={{ mb: 2 }}>
                                         <Typography
                                             variant="body2"
-                                            sx={{ mb: 1, color: 'text.secondary', fontWeight: 600, fontSize: '0.8rem' }}
+                                            sx={{ mb: 1, color: '#FFFFFF', fontWeight: 600, fontSize: '0.8rem' }}
                                         >
                                             Key Features:
                                         </Typography>
@@ -261,7 +239,7 @@ const ServicesSection: React.FC = () => {
                                                     label={feature}
                                                     size="small"
                                                     sx={{
-                                                        background: `linear-gradient(135deg, ${service.color}20, ${service.color}10)`,
+                                                        background: `#02071a`,
                                                         border: `1px solid ${service.color}30`,
                                                         color: service.color,
                                                         fontWeight: 500,
@@ -278,8 +256,9 @@ const ServicesSection: React.FC = () => {
                                         size="small"
                                         onClick={() => handleOpen(service)}
                                         sx={{
-                                            borderColor: service.color,
-                                            color: service.color,
+                                            // borderColor: service.color,
+                                            background:'linear-gradient(black, black) padding-box, linear-gradient(317deg, rgba(0, 51, 255, 1) 19%, rgba(251, 0, 255, 1) 65%) border-box',
+                                            color: '#FFFFFF',
                                             fontWeight: 600,
                                             borderRadius: 2,
                                             fontSize: '0.8rem',
