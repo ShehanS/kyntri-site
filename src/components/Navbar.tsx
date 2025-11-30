@@ -10,16 +10,15 @@ import {
     ListItemText,
     Toolbar,
     Typography,
-    useMediaQuery,
-    useTheme
+
 } from '@mui/material';
 import {motion} from 'framer-motion';
 import {AutoAwesome, Close as CloseIcon, Code, ContactMail, Menu as MenuIcon, Psychology} from '@mui/icons-material';
 const Navbar: React.FC = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    // const theme = useTheme();
+    // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const navItems = [
         {name: 'Services', href: '#services', icon: <Code/>},
@@ -59,7 +58,7 @@ const Navbar: React.FC = () => {
                 </IconButton>
             </Box>
             <List>
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                     <ListItem
                         key={item.name}
                         onClick={() => scrollToSection(item.href)}

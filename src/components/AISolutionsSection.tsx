@@ -6,7 +6,6 @@ import {
     Card,
     CardContent,
     Chip,
-    Avatar,
     useMediaQuery
 } from '@mui/material';
 import { motion } from 'framer-motion';

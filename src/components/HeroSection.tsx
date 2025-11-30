@@ -1,19 +1,16 @@
 import React from 'react';
 import {Box, Button, Container, Grid, Typography} from '@mui/material';
 import {motion} from 'framer-motion';
-import {AutoAwesome, CloudQueue, Code, Psychology, Security, Speed} from '@mui/icons-material';
 import dashboard from "../../public/dashboard.json";
 import Lottie from "lottie-react";
 const HeroSection: React.FC = () => {
-    const techStack = [
-        {label: 'AI/ML', icon: <Psychology/>, color: '#00D4FF'},
-        {label: 'Automation', icon: <AutoAwesome/>, color: '#FF6B6B'},
-        {label: 'Performance', icon: <Speed/>, color: '#4CAF50'},
-        {label: 'Development', icon: <Code/>, color: '#FF9800'},
-        {label: 'Cloud', icon: <CloudQueue/>, color: '#9C27B0'},
-        {label: 'Security', icon: <Security/>, color: '#F44336'},
-    ];
+    const scrollToSection = (href: string) => {
+        const element = document.querySelector(href);
+        if (element) {
+            element.scrollIntoView({behavior: 'smooth'});
+        }
 
+    };
     return (
         <Box
             sx={{
@@ -63,7 +60,7 @@ const HeroSection: React.FC = () => {
 
             <Container maxWidth="xl">
                 <Grid container spacing={6} alignItems="center">
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -148,7 +145,7 @@ const HeroSection: React.FC = () => {
                         </motion.div>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
                             animate={{ opacity: 1, scale: 1, rotateY: 0 }}

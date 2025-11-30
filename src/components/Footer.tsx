@@ -23,7 +23,7 @@ import {
 } from '@mui/icons-material';
 
 const Footer: React.FC = () => {
-    const currentYear = new Date().getFullYear();
+    // const currentYear = new Date().getFullYear();
 
     const socialLinks = [
         { icon: <LinkedIn />, href: '#', label: 'LinkedIn' },
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
                 <Grid container spacing={6} sx={{ py: 8 }}>
                     {/* Company Info */}
-                    <Grid item xs={12} md={4}>
+                    <Grid size={{ xs: 12, md: 4 }}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
                     </Grid>
 
                     {/* Quick Links */}
-                    <Grid item xs={12} sm={6} md={2}>
+                    <Grid size={{ xs: 12, sm:6, md: 2 }}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ const Footer: React.FC = () => {
                     </Grid>
 
                     {/* Services */}
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid size={{ xs: 12, sm: 6, md:3 }}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +247,7 @@ const Footer: React.FC = () => {
                     </Grid>
 
                     {/* Contact Info */}
-                    <Grid item xs={12} md={3}>
+                    <Grid size={{ xs: 12, md: 3 }}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}

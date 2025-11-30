@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Container, Typography, Card, CardContent, Chip, Button, Avatar, useMediaQuery } from '@mui/material';
+import { Box, Container, Typography, Card, CardContent, Chip, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
 import {
-    AutoAwesome,
     Speed,
     Engineering,
     SmartToy,

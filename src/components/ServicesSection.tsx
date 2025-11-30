@@ -22,9 +22,7 @@ import {
     Speed,
     Code,
     CloudQueue,
-    Security,
     Analytics,
-    SmartToy,
     Engineering,
 } from '@mui/icons-material';
 

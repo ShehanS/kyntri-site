@@ -5,19 +5,20 @@ import {
     Box,
     TextField,
     Button,
-    Grid,
     Card,
     CardContent,
     Chip,
     Avatar,
-    Divider
+    Divider,
+    Grid
 } from '@mui/material';
+
 import { motion } from 'framer-motion';
 import {
     Email,
     Phone,
     LocationOn,
-    Send,
+
     CheckCircle,
     Schedule,
     Support
@@ -143,7 +144,7 @@ const ContactSection: React.FC = () => {
 
                 <Grid container spacing={6}>
                     {/* Contact Form */}
-                    <Grid item xs={12} md={8}>
+                    <Grid size={{ xs: 12, md: 8 }}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -164,7 +165,7 @@ const ContactSection: React.FC = () => {
 
                                     <Box component="form" onSubmit={handleSubmit} noValidate>
                                         <Grid container spacing={3}>
-                                            <Grid item xs={12} sm={6}>
+                                            <Grid size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Your Name"
@@ -185,7 +186,7 @@ const ContactSection: React.FC = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} sm={6}>
+                                            <Grid size={{ xs: 12, sm: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Email Address"
@@ -207,7 +208,7 @@ const ContactSection: React.FC = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={{ xs: 12}}>
                                                 <TextField
                                                     fullWidth
                                                     label="Company"
@@ -228,7 +229,7 @@ const ContactSection: React.FC = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={{ xs: 12}}>
                                                 <TextField
                                                     fullWidth
                                                     label="Tell us about your project"
@@ -251,7 +252,7 @@ const ContactSection: React.FC = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={{ xs: 12}}>
                                                 <Button
                                                     variant="contained"
                                                     type="submit"
@@ -285,7 +286,7 @@ const ContactSection: React.FC = () => {
                     </Grid>
 
                     {/* Contact Info */}
-                    <Grid item xs={12} md={4}>
+                    <Grid size={{ xs: 12, md: 4 }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
