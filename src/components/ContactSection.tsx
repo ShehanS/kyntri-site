@@ -49,22 +49,22 @@ const ContactSection: React.FC = () => {
         {
             icon: <Email sx={{ fontSize: 30 }} />,
             title: 'Email Us',
-            details: 'hello@techsolutions.com',
+            details: 'info@kyntri.net',
             description: 'Send us an email anytime',
             color: '#00D4FF',
         },
         {
             icon: <Phone sx={{ fontSize: 30 }} />,
             title: 'Call Us',
-            details: '+1 (555) 123-4567',
+            details: '+94 77 6420675',
             description: 'Mon-Fri from 9am to 6pm',
             color: '#FF6B6B',
         },
         {
             icon: <LocationOn sx={{ fontSize: 30 }} />,
             title: 'Visit Us',
-            details: '123 Tech Street, Innovation City',
-            description: 'Come say hello at our office',
+            details: '',
+            description: '',
             color: '#4CAF50',
         },
     ];

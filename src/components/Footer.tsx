@@ -47,9 +47,9 @@ const Footer: React.FC = () => {
     ];
 
     const contactInfo = [
-        { icon: <Email />, text: 'hello@techsolutions.com' },
-        { icon: <Phone />, text: '+1 (555) 123-4567' },
-        { icon: <LocationOn />, text: '123 Tech Street, Innovation City' },
+        { icon: <Email />, text: 'info@kyntri.net' },
+        { icon: <Phone />, text: '+94 77 6420675' },
+        { icon: <LocationOn />, text: '' },
     ];
 
     return (
